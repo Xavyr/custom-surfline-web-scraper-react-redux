@@ -15,7 +15,7 @@ const firstReducer = (state = initialState, action) => {
     case 'ASYNC_ACTION':
       return {
         ...state,
-        asyncData: action.payload
+        asyncData: JSON.stringify(action.payload)
       }
     default:
       return state;

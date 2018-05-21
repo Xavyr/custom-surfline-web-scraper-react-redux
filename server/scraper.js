@@ -43,12 +43,15 @@ const scrapeController = {
 };
 
 function surfToObject($) {
+  let todaysDate = new Date();
+  let dateString = todaysDate.toDateString();
 	return {
-		conditionOverview: $('.quiver-surf-height').text(),
-		day: cleanString($('div .module span strong').text()).split('at ')[0],
-		conditionDetails: cleanString($('.sl-spot-report__report-text p').text()),
-		waveHeight: $('#observed-wave-range').text(),
-		waveDescription: cleanString($('#observed-wave-description').text()),
+		tide: "Tide: " + $('.sl-reading').text().split("FT")[0] + " FT.",
+		swells: $('.sl-spot-forecast-summary__stat-swells').text().split('Swells')[1],
+		day: dateString,
+		conditionDetails: cleanString($('.sl-spot-report__report-text p').text()).split('ShortTerm')[0],
+		waveHeight: $('.quiver-surf-height').text().split('FT')[0],
+		forecast: cleanString($('.sl-spot-report__report-text p').text()).split('ShortTerm')[1],
 	};
 }
 

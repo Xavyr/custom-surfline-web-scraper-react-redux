@@ -20,16 +20,16 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-class ExampleContainer extends Component {
+class ScrapedBeaches extends Component {
 
   componentDidMount() {
-    console.log('exampleContainer did mount');
+    console.log('check the store here for anything availible');
   }
 
   render() {
     return (
       <div>
-        <h1 style={{textAlign: 'center'}}>Example Container Header</h1>
+        <h1 style={{textAlign: 'center'}}>Your Scraped Beaches</h1>
         <ExampleComponent
           syncAction={this.props.syncAction}
           syncData={this.props.syncData}
@@ -41,4 +41,4 @@ class ExampleContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ExampleContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ScrapedBeaches);

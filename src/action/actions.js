@@ -1,8 +1,8 @@
 import * as types from '../constants/actionTypes.js'
 
-export const asyncAction = () => {
+export const searchBeach = (values) => {
   return (dispatch) => {
-    const beachData = fetch('http://localhost:3005/trestles')
+    const beachData = fetch('http://localhost:3005/beaches/' + values.search)
       .then(function(response) {
         return response.json();
       })
@@ -11,7 +11,7 @@ export const asyncAction = () => {
       });
 
     return beachData.then(
-      (singleBeachData) => dispatch({ type: types.ASYNC_ACTION, payload: singleBeachData  }),
+      (singleBeachData) => dispatch( { type: types.SEARCH_BEACH, payload: singleBeachData, location: values.search  }),
     ).catch(
       (err) => dispatch(err)
     );
@@ -19,9 +19,6 @@ export const asyncAction = () => {
   }
 };
 
-export const syncAction = () => {
-  return {type: types.SYNC_ACTION, payload: true}
-}
 
 
 

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Beach from '../components/exampleComponent.jsx';
+import BeachCard from '../components/beachCard.jsx';
 import InputForm from '../components/inputForm.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Button from '@material-ui/core/Button';
 import * as actions from '../action/actions'
 
 
@@ -28,10 +27,10 @@ class ScrapedBeachesContainer extends Component {
   render() {
     let theBeaches = [];
     for(let i = 0; i < this.props.beaches.length; i++) {
-      theBeaches.push(<Beach
+      theBeaches.push(<BeachCard
         key={i}
-        syncAction={this.props.syncData}
-        beaches={this.props.beaches[i]}
+        location={this.props.beaches[i].location}
+        {...this.props.beaches[i].report}
       />);
     }
 

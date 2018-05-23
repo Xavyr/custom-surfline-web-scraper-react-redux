@@ -1,6 +1,8 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import InputText from './inputText.jsx'
+import Button from '@material-ui/core/Button';
+
 
 const SimpleForm = (props) => {
   const submitBeach = (values) => (props.searchBeach(values));
@@ -13,7 +15,7 @@ const SimpleForm = (props) => {
           component={InputText}
         />
       </div>
-      <button type="submit">Submit</button>
+      <Button variant="raised" color="primary" type="submit">Submit</Button>
     </form>
   )
 }

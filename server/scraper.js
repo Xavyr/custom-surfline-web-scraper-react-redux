@@ -5,22 +5,23 @@ const request = require('request');
 const mcache = require('memory-cache');
 
 const beaches = {
-	'/venice': 'http://www.surfline.com/surf-report/venice-beach-southern-california_4211/',
-	'/trestles': 'http://www.surfline.com/surf-report/lower-trestles-southern-california_4740/',
-	'/ventura': 'http://www.surfline.com/surf-report/c-st-overview-southern-california_4200/'
+	'venice': 'http://www.surfline.com/surf-report/venice-beach-southern-california_4211/',
+	'trestles': 'http://www.surfline.com/surf-report/lower-trestles-southern-california_4740/',
+	'ventura': 'http://www.surfline.com/surf-report/c-st-overview-southern-california_4200/'
 };
 
 const scrapeController = {
   getData: function (req, res, next) {
-  	if(mcache.get(req.url)) {
+    let beachName = req.params['0'];
+  	if(mcache.get(beachName)) {
   		console.log('out of cache');
-  		res.send(mcache.get(req.url));
+  		res.send(mcache.get(beachName));
   		return;
 	  }
-	  request(beaches[req.url], (error, response, html) => {
+	  request(beaches[beachName], (error, response, html) => {
 			let $ = cheerio.load(html);
 			let surf = surfToObject($);
-			mcache.put(req.url, surf);
+			mcache.put(beachName, surf);
 			console.log('inside req');
 			res.send(surf);
 		});

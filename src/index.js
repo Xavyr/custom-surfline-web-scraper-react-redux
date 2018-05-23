@@ -4,9 +4,14 @@ import { Provider } from 'react-redux';
 import store from './store.js';
 import ScrapedBeachesContainer from './containers/ScrapedBeachesContainer.jsx';
 
+const ocean = {
+  fontSize: '100px',
+  border: '5px solid pink'
+};
+
 ReactDOM.render(
   <Provider store={store}>
-    <ScrapedBeachesContainer />
+    <ScrapedBeachesContainer style={ocean}/>
   </Provider>, document.getElementById('root'));
 
 module.hot.accept();

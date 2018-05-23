@@ -9,6 +9,7 @@ const InputText = ({ input, ...value }) => {
       {...input}
       {...value}
       label={"Search A Beach"}
+      fullWidth
     />
   )
 }

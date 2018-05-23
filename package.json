@@ -15,6 +15,7 @@
   "license": "MIT",
   "homepage": "https://github.com/Xavyr/react-redux-boilerplate",
   "dependencies": {
+    "@material-ui/core": "^1.0.0",
     "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
@@ -25,6 +26,7 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
+    "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0",
     "request": "^2.86.0"
   },

@@ -8,11 +8,7 @@ const cors = require('cors');
 app.use(cors());
 
 // first sample route
-app.get('/venice', scraperController.getData);
-
-app.get('/trestles', scraperController.getData);
-
-app.get('/ventura', scraperController.getData);
+app.get('/beaches/*', scraperController.getData);
 
 app.get('/all', scraperController.getAllData);
 

@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
+
+
 const BeachCard = ( { location, conditionDetails, day, forecast, swells, tide, waveHeight } ) => {
   return (
     <div>
@@ -18,7 +20,7 @@ const BeachCard = ( { location, conditionDetails, day, forecast, swells, tide, w
             {day}
           </Typography>
 
-          <Typography color="textSecondary" component="h3">
+          <Typography className="another" component="h3">
             Condition Details
           </Typography>
           <Typography color="primary" component="h3">

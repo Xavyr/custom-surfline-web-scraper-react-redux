@@ -1,0 +1,18 @@
+$font-stack: 'Kavivanar', cursive;
+$primary-color: #FFC0CB;
+
+.test {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+
+.another{
+  font: 100% $font-stack !important;
+  color: $primary-color !important;
+  margin: 100px !important;
+}
+
+
+//font-family: 'Kavivanar', cursive;
+//font-family: 'Modern Antiqua', cursive;

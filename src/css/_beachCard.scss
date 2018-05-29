@@ -1,17 +1,13 @@
 $font-stack: 'Kavivanar', cursive;
-$primary-color: #FFC0CB;
-
-.test {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+$title-color: #073864;
 
 
-.another{
+.title{
   font: 100% $font-stack !important;
-  color: $primary-color !important;
-  margin: 100px !important;
+  font-size: 30px;
+  color: $title-color !important;
 }
+
 
 
 //font-family: 'Kavivanar', cursive;

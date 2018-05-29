@@ -3,7 +3,6 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 
 
 
@@ -19,48 +18,52 @@ const BeachCard = ( { location, conditionDetails, day, forecast, swells, tide, w
           <Typography color="secondary" component="h3">
             {day}
           </Typography>
+          <br/>
 
-          <Typography className="another" component="h3">
+          <Typography className="title" component="h3">
             Condition Details
           </Typography>
           <Typography color="primary" component="h3">
             {conditionDetails}
           </Typography>
+          <br/>
 
-          <Typography color="textSecondary" component="h3">
+          <Typography className="title" color="textSecondary" component="h3">
             Wave Height (ft)
           </Typography>
           <Typography color="primary" component="h3">
             {waveHeight}
           </Typography>
+          <br/>
 
-          <Typography color="textSecondary" component="h3">
+          <Typography className="title" color="textSecondary" component="h3">
             Swells
           </Typography>
           <Typography color="primary" component="h3">
             {swells}
           </Typography>
+          <br/>
 
-          <Typography color="textSecondary" component="h3">
+          <Typography className="title" color="textSecondary" component="h3">
             Forecast
           </Typography>
           <Typography color="primary" component="h3">
             {forecast}
           </Typography>
-          <Typography color="primary" component="h3">
+          <br/>
+
+          <Typography className="title" color="primary" component="h3">
             {tide}
           </Typography>
 
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">
-            See Map
-          </Button>
-          <Button size="small" color="primary">
-            ?{/*? hover over map and show info*/}
-          </Button>
+          {/*<Button size="small" color="primary">*/}
+            {/*Send As Text*/}
+          {/*</Button>*/}
         </CardActions>
       </Card>
+      <br/><br/>
     </div>
   )
 }

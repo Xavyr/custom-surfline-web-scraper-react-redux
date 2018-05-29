@@ -15,7 +15,7 @@ const SimpleForm = (props) => {
           component={InputText}
         />
       </div>
-      <Button variant="raised" color="primary" type="submit">Submit</Button>
+      <br/><br/>
     </form>
   )
 }

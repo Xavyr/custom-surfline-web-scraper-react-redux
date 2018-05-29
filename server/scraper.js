@@ -7,7 +7,10 @@ const mcache = require('memory-cache');
 const beaches = {
 	'venice': 'http://www.surfline.com/surf-report/venice-beach-southern-california_4211/',
 	'trestles': 'http://www.surfline.com/surf-report/lower-trestles-southern-california_4740/',
-	'ventura': 'http://www.surfline.com/surf-report/c-st-overview-southern-california_4200/'
+	'ventura': 'http://www.surfline.com/surf-report/c-st-overview-southern-california_4200/',
+  'el porto': 'https://www.surfline.com/surf-report/el-porto-north/584204214e65fad6a7709d24',
+  'hermosa': 'https://www.surfline.com/surf-report/hermosa-beach/5842041f4e65fad6a7708904',
+  'malibu': 'https://www.surfline.com/surf-report/county-line/5842041f4e65fad6a7708813'
 };
 
 const scrapeController = {

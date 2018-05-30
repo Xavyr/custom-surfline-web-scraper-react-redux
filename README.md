@@ -1,4 +1,4 @@
-# surfline-web-scraper
+# Surfline Web Scraper
 A Southern California surf scraper; built in React/Redux on the frontend this application utilizes Redux forms for user input.
 
 Depending on the inputted beach name (venice, ventura, etc.) the user receives the given surf report scraped from surfline. 

@@ -5,3 +5,5 @@ Depending on the inputted beach name (venice, ventura, etc.) the user receives t
 
 The backend is built in Node.js, utilizing Cherio for web scraping inside of the middleware controller. The results are cached in MemCache saving the redundant computation of scraping the same beach multiple times. 
 
+Feel free to fork/clone/whatever this has just been a side project for experimentation. 
+
